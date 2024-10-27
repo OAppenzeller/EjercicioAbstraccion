@@ -1,26 +1,28 @@
 ﻿namespace EjercicioAbstraccion
 {
-    class AreadeTriangulo : FormulaMatematica
+    class AreaTriangulo : FormulaMatematica
     {
         private double baseTriangulo;
-        private double alturaTriangulo;
+        private double altura;
         private double area;
 
-        public void AreaTriangulo(double baseTriangulo, double alturaTriangulo)
+        // Asegúrate de que el nombre del constructor sea idéntico al nombre de la clase
+        public AreaTriangulo(double baseTriangulo, double altura)
         {
             this.baseTriangulo = baseTriangulo;
-            this.alturaTriangulo = alturaTriangulo;
+            this.altura = altura;
         }
 
         public override void Calcular()
         {
-            area = (baseTriangulo * alturaTriangulo) / 2;
-           
+            area = (baseTriangulo * altura) / 2;
         }
 
         public override void Imprimir()
         {
-            Console.WriteLine("El area del triangulo es: " + area);
+            Console.WriteLine("");
+            Console.WriteLine($"El área del triángulo con base {baseTriangulo} y altura {altura} es: {area}");
         }
     }
+
 }
